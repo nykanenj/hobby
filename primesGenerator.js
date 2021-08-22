@@ -6,6 +6,12 @@ const sumAll = (numberArray) => {
 };
 
 const generatePrimeNumbers = (uptoNumber = 100) => {
+  if (uptoNumber < 2) return [];
+  if (uptoNumber < 3) return [2];
+  if (uptoNumber < 4) return [2, 3];
+  if (uptoNumber < 6) return [2, 3, 5];
+  if (uptoNumber < 11) return [2, 3, 5, 7];
+
   const primesArr = [3, 7]; // 5 omitted
   const primesObj = { 2: true, 3: true, 5: true, 7: true };
   let currentSquareRoot = 3;
